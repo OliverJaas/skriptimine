@@ -17,4 +17,4 @@ taisbusse=$(( bussikohad / reisijad ))
 buss_ymarda="`echo "($taisbusse+0.9)/1" | bc`" 
 mahajaanud=$((reisijad - bussikohad))
 
-echo "Täis busse on $buss_ymarda ja maha on jäänud $mahajaanud" 
+echo "Täis busse on $buss_ymarda ja maha on jäänud $mahajaanud reisijat" 
