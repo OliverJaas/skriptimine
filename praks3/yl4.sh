@@ -5,16 +5,26 @@
 #ning palju maha jääb reisijaid, sest bussikohti pole
 
 
-grupis=reisijad
-kohad=bussikohad
-
-echo "Mitu reisijat on grupis: "
+echo -n "Sisesta reisijate arv: "
 read reisijad
-echo "Mitu kohta on ühes bussis: "
-read bussikohad
-
-taisbusse=$(( bussikohad / reisijad ))
-buss_ymarda="`echo "($taisbusse+0.9)/1" | bc`" 
-mahajaanud=$((reisijad - bussikohad))
-
-echo "Täis busse on $buss_ymarda ja maha on jäänud $mahajaanud reisijat" 
+echo -n "Sisesta kohtade arv bussis: "
+read kohad
+#
+#
+#
+#
+#
+#
+bussid=$(($reisijad / $kohad))
+ylejaanud=$(($reisijad % $kohad))
+#
+#
+#
+if test $ylejaanud -gt 0
+then
+	bussid=$(($bussid + 1))
+fi
+#
+#
+#
+echo "Kokku on vaja $bussid taisbussi"
