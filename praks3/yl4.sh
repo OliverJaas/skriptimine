@@ -27,4 +27,4 @@ fi
 #
 #
 #
-echo "Kokku on vaja $bussid taisbussi"
+echo "Kokku on vaja $bussid bussi"
